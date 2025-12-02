@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Navigate, Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 export default function Homepage() {
     const navigate = useNavigate()
@@ -25,7 +25,7 @@ export default function Homepage() {
     const logout = () => {
         sessionStorage.removeItem("token")
         localStorage.removeItem("token")
-        navigate("/login")
+        Navigate("/login")
     }
     return (
 
